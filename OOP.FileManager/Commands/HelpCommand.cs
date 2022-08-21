@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OOP.FileManager;
+﻿using OOP.FileManager;
 using OOP.FileManager.Commands.Base;
 
 namespace FileManager.Commands;
