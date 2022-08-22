@@ -20,6 +20,7 @@ public class FileManagerCoreLogic
         var quit_command = new QuitCommand(this);
         var del_dir_command = new DeleteDirCommand(UserInterface);
         var del_file_command = new DeleteFileCommand(UserInterface);
+        var create_file_command = new CreateFileCommand(UserInterface, this);
 
         Commands = new Dictionary<string, FileManagerCommand>
         {
@@ -38,6 +39,9 @@ public class FileManagerCoreLogic
             { "rf", del_file_command },
             { "rfile", del_file_command},
             { "removefile", del_file_command},
+            { "newfile", create_file_command},
+            { "addfile", create_file_command},
+            { "newdir", new CreateDirCommand(UserInterface, this)},
         };
     }
 
