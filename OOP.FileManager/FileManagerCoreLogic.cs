@@ -42,6 +42,8 @@ public class FileManagerCoreLogic
             { "newfile", create_file_command},
             { "addfile", create_file_command},
             { "newdir", new CreateDirCommand(UserInterface, this)},
+            { "copyfile", new CopyFileCommand(UserInterface)},
+            { "copydir", new CopyDirCommand(UserInterface)},
         };
     }
 
