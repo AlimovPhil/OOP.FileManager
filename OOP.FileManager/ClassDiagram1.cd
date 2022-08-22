@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OOP.FileManager.Commands.Base.FileManagerCommand">
+    <Position X="5.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Base\FileManagerCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileManager.Commands.ChangeDirectoryCommand">
+    <Position X="2.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAQAAAAAAAAAAAAAAAIAAACAAAAAAAA=</HashCode>
+      <FileName>Commands\ChangeDirectoryCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP.FileManager.Commands.CopyDirCommand">
+    <Position X="1.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Commands\CopyDirCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP.FileManager.Commands.CopyFileCommand">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Commands\CopyFileCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP.FileManager.Commands.CreateDirCommand">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAQAAAAAAAAAAAAAAAIAAACAAAAAAAA=</HashCode>
+      <FileName>Commands\CreateDirCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP.FileManager.Commands.CreateFileCommand">
+    <Position X="6.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAQAAAAAAAAAAAAAAAIAAACAAAAAAAA=</HashCode>
+      <FileName>Commands\CreateFileCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP.FileManager.Commands.DeleteDirCommand">
+    <Position X="3.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Commands\DeleteDirCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP.FileManager.Commands.DeleteFileCommand">
+    <Position X="11.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Commands\DeleteFileCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP.FileManager.Commands.ShowDrivesCommand">
+    <Position X="8.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Commands\ShowDrivesCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP.FileManager.Commands.TextAnalysCommand">
+    <Position X="10.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAQAAAAAAAAAAAAAAAIAAACAAAAAAAA=</HashCode>
+      <FileName>Commands\TextAnalysCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP.FileManager.Commands.ShowFileInfoCommand">
+    <Position X="4.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Commands\ShowFileInfoCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileManager.Commands.HelpCommand">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAQAAAAAAAAAAAAAAAIAAACAAAAAAAA=</HashCode>
+      <FileName>Commands\HelpCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileManager.Commands.PrintDirectoryFilesCommand">
+    <Position X="5.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAQAAAAAAAAAAAAAAAIAAACAAAAAAAA=</HashCode>
+      <FileName>Commands\PrintDirectoryFilesCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileManager.Commands.QuitCommand">
+    <Position X="12.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAQAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\QuitCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP.FileManager.ConsoleUI" BaseTypeListCollapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBAAAAAAAAAAAAIAAAQgAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>ConsoleUI.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OOP.FileManager.FileManagerCoreLogic">
+    <Position X="16.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAACEAAAAEAAAAAAAAAAAAAAAAIACAAAAAAAA=</HashCode>
+      <FileName>FileManagerCoreLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="OOP.FileManager.IUserInterface">
+    <Position X="14.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAIAAAQgAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>IUserInterface.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

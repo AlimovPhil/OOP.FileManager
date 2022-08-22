@@ -44,6 +44,8 @@ public class FileManagerCoreLogic
             { "newdir", new CreateDirCommand(UserInterface, this)},
             { "copyfile", new CopyFileCommand(UserInterface)},
             { "copydir", new CopyDirCommand(UserInterface)},
+            { "textinfo", new TextAnalysCommand(UserInterface, this)},
+            { "fileinfo", new ShowFileInfoCommand(UserInterface)},
         };
     }
 
