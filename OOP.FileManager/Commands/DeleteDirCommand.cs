@@ -3,18 +3,14 @@
 namespace OOP.FileManager.Commands;
 
 
-public class DeleteDirCommand: FileManagerCommand
+public class DeleteDirCommand : FileManagerCommand
 {
     private readonly IUserInterface _UserInterface;
-    private readonly FileManagerCoreLogic _FileManager;
 
     public override string Description => "Удаление папки";
 
-    public DeleteDirCommand(IUserInterface UserInterface, FileManagerCoreLogic FileManager)
-    {
-        _UserInterface = UserInterface;
-        _FileManager = FileManager;
-    }
+    public DeleteDirCommand(IUserInterface UserInterface) => _UserInterface = UserInterface;
+
     public override void Execute(string[] args)
     {
         if (args.Length != 2 || string.IsNullOrWhiteSpace(args[1]))
@@ -25,7 +21,7 @@ public class DeleteDirCommand: FileManagerCommand
         var dir_path = args[1];
 
         DirectoryInfo? directory;
-        
+
         directory = new DirectoryInfo(dir_path);
 
         if (!directory.Exists)
@@ -34,16 +30,40 @@ public class DeleteDirCommand: FileManagerCommand
             return;
         }
 
-        try
+        _UserInterface.WriteLine($"Вы действительно хотите удалить директорию {directory.FullName}?\n YES  NO");
+        
+        var input = _UserInterface.ReadLine("> ", false);
+        
+        if (input.Length > 3)
         {
-            Directory.Delete(dir_path, true); // параметр true означает, что подпапки и файлы будут так же удалены рекурсивно
+            _UserInterface.WriteLine("Подтверждение не получено, удаление отменено");
+            return;
         }
 
-        catch (IOException e)
+        if (input == "")
         {
-            Console.WriteLine(e.Message);
-        }
+            _UserInterface.WriteLine("Подтверждение не получено, удаление отменено");
+            return;
+        }  
         
-        _UserInterface.WriteLine($"Директория {directory.FullName} удалена");
+        if (input == "no" || input == "NO")
+        {
+            _UserInterface.WriteLine($"Операция удаления директории отменена");
+            return;
+        }
+
+        if (input == "yes" || input == "YES")
+        {
+            try
+            {
+                Directory.Delete(dir_path, true); // параметр true означает, что подпапки и файлы будут так же удалены рекурсивно
+                _UserInterface.WriteLine($"Директория {directory.FullName} удалена");
+            }
+
+            catch (IOException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
     }
 }

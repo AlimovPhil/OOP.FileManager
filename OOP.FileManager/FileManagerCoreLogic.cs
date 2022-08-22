@@ -18,8 +18,8 @@ public class FileManagerCoreLogic
         var list_dir_command = new PrintDirectoryFilesCommand(UserInterface, this);
         var help_command = new HelpCommand(UserInterface, this);
         var quit_command = new QuitCommand(this);
-        var del_dir_command = new DeleteDirCommand(UserInterface, this);
-        var del_file_command = new DeleteFileCommand(UserInterface, this);
+        var del_dir_command = new DeleteDirCommand(UserInterface);
+        var del_file_command = new DeleteFileCommand(UserInterface);
 
         Commands = new Dictionary<string, FileManagerCommand>
         {

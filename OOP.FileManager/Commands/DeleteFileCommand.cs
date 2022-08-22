@@ -6,15 +6,11 @@ namespace OOP.FileManager.Commands;
 public class DeleteFileCommand : FileManagerCommand
 {
     private readonly IUserInterface _UserInterface;
-    private readonly FileManagerCoreLogic _FileManager;
 
     public override string Description => "Удаление файла";
 
-    public DeleteFileCommand(IUserInterface UserInterface, FileManagerCoreLogic FileManager)
-    {
-        _UserInterface = UserInterface;
-        _FileManager = FileManager;
-    }
+    public DeleteFileCommand(IUserInterface UserInterface) => _UserInterface = UserInterface;
+
     public override void Execute(string[] args)
     {
         if (args.Length != 2 || string.IsNullOrWhiteSpace(args[1]))
@@ -35,16 +31,41 @@ public class DeleteFileCommand : FileManagerCommand
             return;
         }
 
-        try
+        _UserInterface.WriteLine($"Вы действительно хотите удалить файл {file.FullName}?\n YES  NO");
+
+        var input = _UserInterface.ReadLine("> ", false);
+
+        if (input.Length > 3)
         {
-            File.Delete(file_path);
-        }
-        catch (IOException e)
-        {
-            Console.WriteLine(e.Message);
+            _UserInterface.WriteLine("Подтверждение не получено, удаление отменено");
             return;
         }
 
-        _UserInterface.WriteLine($"Файл {file.FullName} удален");
+        if (input == "")
+        {
+            _UserInterface.WriteLine("Подтверждение не получено, удаление отменено");
+            return;
+        }
+
+        if (input == "no" || input == "NO")
+        {
+            _UserInterface.WriteLine($"Операция удаления файла отменена");
+            return;
+        }
+
+        if (input == "yes" || input == "YES")
+        {
+            try
+            {
+                File.Delete(file_path);
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine(e.Message);
+                return;
+            }
+
+            _UserInterface.WriteLine($"Файл {file.FullName} удален");
+        }
     }
 }
